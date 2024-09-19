@@ -11,8 +11,7 @@ border-radius: 4px ;
 }
 
 .container-top{
-    position: fixed;
-max-width: 600px ;
+position: fixed;
 width: 100vw;
 height: 92px;
 gap: 0px;
