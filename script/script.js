@@ -67,7 +67,7 @@ function mostrarResumoPedido() {
 
     selecionados.forEach(item => {
         const titulo = item.querySelector('.titulo-pedido').innerText;
-        const preco = parseFloat(item.querySelector('.preço, .preço2').innerText.replace(',', '.'));
+        const preco = Number(item.querySelector('.preço, .preço2').innerText.replace(',', '.'));
 
         // Criar elementos para adicionar na tela de final do pedido
         const itemPedido = document.createElement('p');
@@ -81,7 +81,7 @@ function mostrarResumoPedido() {
     document.getElementById('valor-total').innerText = total.toFixed(2).replace('.', ',');
 }
 
-// botão cancelar apaga a pagina de compras e volta para o inicio
+// botão cancelar apaga a pagina de compras e volta para a inicial
 document.getElementById('cancelar-pedido').addEventListener('click', function() {
     document.querySelector('.fimdecompra').style.display = 'none';
 });
