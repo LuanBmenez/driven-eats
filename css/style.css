@@ -60,14 +60,14 @@ border-radius: 4px ;
 .pratos{
     display: flex;
     gap:16px ;
-    margin-bottom:27px ;
+    margin-bottom:37px ;
     overflow: scroll;
 }
 
 .pratos2{
     display: flex;
     gap:16px ;
-    margin-bottom:98px ;
+    margin-bottom:118px ;
     overflow: scroll;
 }
 
@@ -101,15 +101,13 @@ border-radius: 4px ;
     margin-left: 8px;
 }
 
-
-
 .Titulo-post2 {
     width: 320px;
     height: 25px;
     font-family: Righteous;
     font-size: 26px;
     font-weight: 400;
-    margin-bottom: 17px;
+    margin-bottom: 27px;
 }
 
 .final{
@@ -122,14 +120,6 @@ border-radius: 4px ;
     background-color: #ffffff;
     bottom: 0;
     left: 0;
-}
-
-
-.textofinal{
-    width: 50vw;
-    height: 61px;
-    top: 949px;
-    left: 25px;
 }
 
 .fim{
