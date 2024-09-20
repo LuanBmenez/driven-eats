@@ -1,4 +1,4 @@
-// Seleciona todas as seções (linhas) que contêm os quadros criando assim variaveis
+// Seleciona todas as seções (linhas) que contêm os quadros
 const comidas = document.querySelectorAll('.almoco, .bebidas, .sobremesas');
 const botaoFecharPedido = document.getElementById('botao-ativo');
 
@@ -9,19 +9,17 @@ let itensSelecionados = {
     Sobremesa: false
 };
 
-// Para cada linha, aciona o comportamento de seleção para bebidas não inteferirem em sobremesas por exemplo
+// Para cada linha, aciona o comportamento de seleção
 comidas.forEach(linha => {
     const quadros = linha.querySelectorAll('.quadro1');
 
     quadros.forEach(quadro => {
         quadro.addEventListener('click', function() {
-            // Remove a classe 'selecionado' de outros quadros na linha, assim ficando somente um
+            // Remove a classe 'selecionado' de outros quadros
             quadros.forEach(item => item.classList.remove('selected'));
-            
-            // Adiciona a classe selecionado ao item em qual apertei
             this.classList.add('selected');
 
-            // Verifica o tipo de item selecionado com base nas classes corretas
+            // Verifica o tipo de item selecionado
             if (linha.classList.contains('almoco')) {
                 itensSelecionados.Comida = true;
             } else if (linha.classList.contains('bebidas')) {
@@ -35,8 +33,9 @@ comidas.forEach(linha => {
         });
     });
 });
- //verifica se todos os itens foram selecionados, mundado o bottom final para fechar pedido
-function verificarSelecao(){
+
+// Verifica se todos os itens foram selecionados
+function verificarSelecao() {
     const { Comida, Bebida, Sobremesa } = itensSelecionados;
 
     if (Comida && Bebida && Sobremesa) {
@@ -49,3 +48,40 @@ function verificarSelecao(){
         botaoFecharPedido.innerText = 'Selecione os 3 itens para fechar o pedido';
     }
 }
+
+// Comportamento do botão "Fechar Pedido"
+botaoFecharPedido.addEventListener('click', function() {
+    if (botaoFecharPedido.classList.contains('botao-ativo')) {
+        document.querySelector('.fimdecompra').style.display = 'flex';
+        mostrarResumoPedido();
+    }
+});
+
+// Exibe o resumo do pedido
+function mostrarResumoPedido() {
+    const listaPedido = document.querySelector('.pedido-itens');
+    listaPedido.innerHTML = ''; 
+
+    let total = 0;
+    const selecionados = document.querySelectorAll('.quadro1.selected');
+
+    selecionados.forEach(item => {
+        const titulo = item.querySelector('.titulo-pedido').innerText;
+        const preco = parseFloat(item.querySelector('.preço, .preço2').innerText.replace(',', '.'));
+
+        // Criar elementos para adicionar na tela de resumo
+        const itemPedido = document.createElement('p');
+        itemPedido.innerHTML = `<span>${titulo}</span> <span>R$ ${preco.toFixed(2).replace('.', ',')}</span>`;
+        listaPedido.appendChild(itemPedido);
+
+        total += preco; // Somar o preço ao total
+    });
+
+    // Atualiza o valor total no HTML
+    document.getElementById('valor-total').innerText = total.toFixed(2).replace('.', ',');
+}
+
+// botão cancelar apaga a pagina de compras e volta para o inicio
+document.getElementById('cancelar-pedido').addEventListener('click', function() {
+    document.querySelector('.fimdecompra').style.display = 'none';
+});

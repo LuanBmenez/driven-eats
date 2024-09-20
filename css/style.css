@@ -191,12 +191,95 @@ img{
     text-align: center;
     border-radius: 50px;
 }
-.fimdecompra{
-    display:none ;
+.fimdecompra {
+    display: none;
     position: fixed;
     width: 100%;
     height: 100%;
-    background-color:#EEEEEE;
+    background-color: rgba(238, 238, 238, 0.8);
     top: 0;
-    opacity: 0.8;
+    align-items: center;
+    justify-content: center;
+}
+
+.telacompra {
+    background-color: #4CAF50; /* Cor de fundo verde */
+    padding: 20px;
+    width: 360px; /* Ajuste da largura do modal */
+    border-radius: 15px; /* Bordas arredondadas */
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.telacompra h1 {
+    font-family: Roboto;
+
+    color: white;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.pedido-itens {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-family: Roboto;
+    color: white;
+}
+
+.pedido-itens p {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px; 
+}
+
+.total-pedido {
+    color: white;
+    margin-top: 10px;
+    font-family: Roboto;
+    font-family: Roboto;
+    font-size: 22px;
+    font-weight: 700;
+    text-align: center;
+
+}
+
+.confirmar {
+    font-family: Roboto;
+    background-color: white;
+    color: #4CAF50;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 12px 25px;
+    border-radius: 25px; 
+    border: none;
+    cursor: pointer;
+    width: 80%; 
+    text-align: center;
+    text-decoration: none;
+}
+
+.cancelar {
+    font-family: Roboto;
+    background-color: transparent;
+    color: white;
+    text-decoration: underline;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    text-align: center; 
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 23.44px;
+    letter-spacing: 0.018em;
+    text-align: center;
+
 }
