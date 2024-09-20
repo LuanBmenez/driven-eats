@@ -1,6 +1,6 @@
 body{
-    margin-left: 21px;
     background-color: #eeeeee;
+    max-width: 500px;
 }
 
 img{
@@ -11,29 +11,29 @@ border-radius: 4px ;
 }
 
 .container-top{
-position: fixed;
-width: 100vw;
-height: 92px;
-gap: 0px;
-opacity: 0px;
-background: #CF2B2B;
-top: 0;
-left: 0;
+    max-width: 500px;
+    position: fixed;
+    width: 100vw;
+    height: 92px;
+    background: #CF2B2B;
+    top: 0;
+    left: 0;
 }
 
+.container{
+    margin-left:19px ;
+    margin-top: 123px;
+}
 .titulo{
 
-width: 248px;
-height: 44px;
-top: 8px;
-left: 21px;
-color:#ffffff ;
-font-family: Righteous;
-font-size: 44px;
-font-weight: 400;
-line-height: 54.63px;
-letter-spacing: -0.012em;
-margin-left: 21px;
+    width: 248px;
+    height: 44px;
+    color:#ffffff ;
+    font-family: Righteous;
+    font-size: 44px;
+    font-weight: 400;
+    line-height: 54.63px;
+    margin-left: 21px;
 }
 
 .subtitulo{
@@ -44,14 +44,8 @@ margin-left: 21px;
     font-weight: 400;
     line-height: 21.09px;
     margin-left: 21px;
-    
     margin-top: 5px;
-    
     color:#ffffff ;
-}
-
-.container{
-    margin-top: 123px;
 }
 
 .Titulo-post {
@@ -67,6 +61,14 @@ margin-left: 21px;
     display: flex;
     gap:16px ;
     margin-bottom:27px ;
+    overflow: scroll;
+}
+
+.pratos2{
+    display: flex;
+    gap:16px ;
+    margin-bottom:98px ;
+    overflow: scroll;
 }
 
 .quadro1{
@@ -98,3 +100,48 @@ margin-left: 21px;
     color: #A6A6A6;
     margin-left: 8px;
 }
+
+
+
+.Titulo-post2 {
+    width: 320px;
+    height: 25px;
+    font-family: Righteous;
+    font-size: 26px;
+    font-weight: 400;
+    margin-bottom: 17px;
+}
+
+.final{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 92px;
+    background-color: #ffffff;
+    bottom: 0;
+    left: 0;
+}
+
+
+.textofinal{
+    width: 50vw;
+    height: 61px;
+    top: 949px;
+    left: 25px;
+}
+
+.fim{
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    width: 80vw;
+    height: 61px;
+    gap: 0px;
+    border-radius: 50px;
+    background-color: #cbcbcb;
+    color: #ffffff;
+}
+
