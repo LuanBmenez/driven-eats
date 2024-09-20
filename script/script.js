@@ -67,7 +67,7 @@ function mostrarResumoPedido() {
 
     selecionados.forEach(item => {
         const titulo = item.querySelector('.titulo-pedido').innerText;
-        const preco = parseFloat(item.querySelector('.preço, .preço2').innerText.replace(',', '.'));
+        const preco = Number(item.querySelector('.preço, .preço2').innerText.replace(',', '.'));
 
         // Criar elementos para adicionar na tela de final do pedido
         const itemPedido = document.createElement('p');
