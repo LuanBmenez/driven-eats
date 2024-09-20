@@ -1,4 +1,4 @@
-// Seleciona todas as seções (linhas) que contêm os quadros
+// seleciona as linhas clicaveis importantes
 const comidas = document.querySelectorAll('.almoco, .bebidas, .sobremesas');
 const botaoFecharPedido = document.getElementById('botao-ativo');
 
@@ -9,17 +9,17 @@ let itensSelecionados = {
     Sobremesa: false
 };
 
-// Para cada linha, aciona o comportamento de seleção
+// adiciona onde eu so posso clicar em 1 de cada linha
 comidas.forEach(linha => {
     const quadros = linha.querySelectorAll('.quadro1');
 
     quadros.forEach(quadro => {
         quadro.addEventListener('click', function() {
-            // Remove a classe 'selecionado' de outros quadros
+            // tira a classe selecionado quando seleciono outra comida
             quadros.forEach(item => item.classList.remove('selected'));
             this.classList.add('selected');
 
-            // Verifica o tipo de item selecionado
+            // verifica se selecionei comida bebida ou sobremesa
             if (linha.classList.contains('almoco')) {
                 itensSelecionados.Comida = true;
             } else if (linha.classList.contains('bebidas')) {
@@ -34,7 +34,7 @@ comidas.forEach(linha => {
     });
 });
 
-// Verifica se todos os itens foram selecionados
+// Verifica se todos os itens foram selecionados para ativar o botão de pedido
 function verificarSelecao() {
     const { Comida, Bebida, Sobremesa } = itensSelecionados;
 
@@ -57,7 +57,7 @@ botaoFecharPedido.addEventListener('click', function() {
     }
 });
 
-// Exibe o resumo do pedido
+// Exibe o final do pedido
 function mostrarResumoPedido() {
     const listaPedido = document.querySelector('.pedido-itens');
     listaPedido.innerHTML = ''; 
@@ -69,12 +69,12 @@ function mostrarResumoPedido() {
         const titulo = item.querySelector('.titulo-pedido').innerText;
         const preco = parseFloat(item.querySelector('.preço, .preço2').innerText.replace(',', '.'));
 
-        // Criar elementos para adicionar na tela de resumo
+        // Criar elementos para adicionar na tela de final do pedido
         const itemPedido = document.createElement('p');
         itemPedido.innerHTML = `<span>${titulo}</span> <span>R$ ${preco.toFixed(2).replace('.', ',')}</span>`;
         listaPedido.appendChild(itemPedido);
 
-        total += preco; // Somar o preço ao total
+        total += preco; // Somar o preço
     });
 
     // Atualiza o valor total no HTML
