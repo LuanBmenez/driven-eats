@@ -1,6 +1,5 @@
 body{
     background-color: #eeeeee;
-    max-width: 500px;
 }
 
 img{
@@ -111,6 +110,7 @@ border-radius: 4px ;
 }
 
 .final{
+    max-width: 500px;
     position: fixed;
     display: flex;
     align-items: center;
