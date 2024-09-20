@@ -80,6 +80,10 @@ img{
     background-color:#ffffff ;
 }
 
+.quadro1.selected {
+    box-shadow: 0px 0px 0px 5px rgba(50, 183, 47, 1) inset;
+}
+
 .titulo-pedido{
     margin-top: 11px;
     font-family: Roboto;
@@ -166,5 +170,6 @@ img{
     border-radius: 50px;
     background-color: #cbcbcb;
     color: #ffffff;
+    border: none;
 }
 
