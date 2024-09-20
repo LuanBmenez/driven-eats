@@ -35,7 +35,7 @@ comidas.forEach(linha => {
         });
     });
 });
- //verifica se todos os itens foram selecionados, assim podendo fechar o pedido
+ //verifica se todos os itens foram selecionados, mundado o bottom final para fechar pedido
 function verificarSelecao(){
     const { Comida, Bebida, Sobremesa } = itensSelecionados;
 

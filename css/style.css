@@ -84,6 +84,7 @@ img{
     height: 216px;
     border-radius: 9px ;
     background-color:#ffffff ;
+    border: none;
 }
 
 .quadro1.selected {
