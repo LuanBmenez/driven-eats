@@ -56,14 +56,20 @@ img{
     margin-bottom: 25px;
 }
 
-.pratos{
+.almoco{
+    display: flex;
+    gap:16px ;
+    margin-bottom:37px ;
+    overflow: scroll;
+}
+.bebidas{
     display: flex;
     gap:16px ;
     margin-bottom:37px ;
     overflow: scroll;
 }
 
-.pratos2{
+.sobremesas{
     display: flex;
     gap:16px ;
     margin-bottom:118px ;
@@ -159,17 +165,28 @@ img{
     left: 0;
 }
 
-.fim{
+.botao-ativo {
+    background-color: #32B72F;
+    color: #ffffff;
+    border: none;
+    width: 80vw;
+    height: 61px;
     font-family: Roboto;
     font-size: 20px;
     font-weight: 400;
     text-align: center;
-    width: 80vw;
-    height: 61px;
-    gap: 0px;
     border-radius: 50px;
+}
+
+.botao-inativo {
     background-color: #cbcbcb;
     color: #ffffff;
     border: none;
+    width: 80vw;
+    height: 61px;
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    border-radius: 50px;
 }
-
