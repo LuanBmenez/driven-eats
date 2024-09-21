@@ -1,7 +1,7 @@
 // seleciona as linhas clicaveis importantes
 const comidas = document.querySelectorAll('.almoco, .bebidas, .sobremesas');
-const botaoFecharPedido = document.getElementById('botao-ativo');
-
+const botaoFecharPedido = document.querySelector('.toggle-butom');
+console.log(botaoFecharPedido)
 // Objeto para rastrear a seleção dos itens
 let itensSelecionados = {
     Comida: false,
@@ -28,7 +28,7 @@ comidas.forEach(linha => {
                 itensSelecionados.Sobremesa = true;
             }
 
-            // Verifica se todos os itens foram selecionados
+            
             verificarSelecao();
         });
     });

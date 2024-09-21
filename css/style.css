@@ -203,15 +203,17 @@ img{
 }
 
 .telacompra {
-    background-color: #4CAF50; /* Cor de fundo verde */
+    background-color: #4CAF50; 
     padding: 20px;
-    width: 360px; /* Ajuste da largura do modal */
-    border-radius: 15px; /* Bordas arredondadas */
+    margin-inline: 18px;
+    border-radius: 15px;
     opacity: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 15px;
+    width: 100%;
+
 }
 
 .telacompra h1 {
@@ -231,6 +233,7 @@ img{
     gap: 8px;
     font-family: Roboto;
     color: white;
+    
 }
 
 .pedido-itens p {

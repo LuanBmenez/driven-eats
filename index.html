@@ -15,16 +15,16 @@ rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
   </head>
   <body>
-    <header>
-      <div class="container-top">
+    <header class="container-top">
         <h1 class="titulo">driven eats</h1>
         <p class="subtitulo">Sua comida em 6 minutos</p>
-      </div>
     </header>
-    <section class="container">
+
+    <main class="container">
       <div class="Titulo-post">
         <p>primeiro seu prato</p>
       </div>
+
       <section class="almoco">
         <div class="quadro1">
           <img class="frango" src="IMAGENS/almoço/frango_yin_yang 1.png" alt="Frango" />
@@ -67,7 +67,7 @@ rel="stylesheet">
         <p class="subtitulo-pedido2">Lata 350ml</p>
         <p class="preço2">5,00</p>
       </div>
-    </section>
+      </section>
       <div class="Titulo-post2">
         <p>por fim, sua Sobremesa</p>
       </div>
@@ -91,22 +91,21 @@ rel="stylesheet">
         <p class="preço2">5,00</p>
         </div>
       </section>
-    </section>
-      <footer>
-        <div class="final">
-          <button id="botao-ativo" class="botao-inativo">Selecione os 3 itens para fechar o pedido</button>
-        </div>
-      </footer>
-      <div class="fimdecompra">
-        <div class="telacompra">
-            <h1>Confirme seu pedido</h1>
-            <div class="pedido-itens">
-                <!-- Aqui serão inseridos os itens do pedido -->
-            </div>
-            <p class="total-pedido">TOTAL: R$ <span id="valor-total">0,00</span></p>
-            <a href="https://www.ifood.com.br/" target=“_blank”  id="confirmar-pedido" class="confirmar">Tudo certo, pode pedir!</a>
-            <button id="cancelar-pedido" class="cancelar">Cancelar</button>
-        </div>
+    </main>
+
+    <footer class="final">
+        <button  class="botao-inativo toggle-butom">Selecione os 3 itens para fechar o pedido</button>
+    </footer>
+    <div class="fimdecompra">
+      <div class="telacompra">
+          <h1>Confirme seu pedido</h1>
+          <div class="pedido-itens">
+              <!-- Aqui serão inseridos os itens do pedido -->
+          </div>
+          <p class="total-pedido">TOTAL: R$ <span id="valor-total">0,00</span></p>
+          <a href="https://www.ifood.com.br/" target=“_blank”  id="confirmar-pedido" class="confirmar">Tudo certo, pode pedir!</a>
+          <button id="cancelar-pedido" class="cancelar">Cancelar</button>
+      </div>
     </div>
     <script src="script/script.js"></script>
   </body>
