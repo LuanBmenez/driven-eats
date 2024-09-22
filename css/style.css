@@ -7,6 +7,7 @@ img {
   width: 144px;
   height: 87px;
   border-radius: 4px;
+  object-fit: contain;
 }
 
 .container-top {
@@ -46,8 +47,8 @@ img {
   color: #ffffff;
 }
 
-.Titulo-post {
-  width: 250px;
+.titulo-post {
+  width: fit-content;
   height: 25px;
   font-family: Righteous;
   font-size: 26px;
@@ -55,27 +56,19 @@ img {
   margin-bottom: 25px;
 }
 
-.almoco {
+.almoco, .bebidas, .sobremesas  {
   display: flex;
   gap: 16px;
   margin-bottom: 37px;
   overflow: scroll;
 }
-.bebidas {
-  display: flex;
-  gap: 16px;
-  margin-bottom: 37px;
-  overflow: scroll;
-}
+
 
 .sobremesas {
-  display: flex;
-  gap: 16px;
   margin-bottom: 118px;
-  overflow: scroll;
 }
 
-.quadro1 {
+.quadro-1 {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -86,7 +79,7 @@ img {
   border: none;
 }
 
-.quadro1.selected {
+.quadro-1.selected {
   box-shadow: 0px 0px 0px 5px rgba(50, 183, 47, 1) inset;
 }
 
@@ -111,7 +104,7 @@ img {
   margin-left: 8px;
 }
 
-.subtitulo-pedido2 {
+.subtitulo-pedido-2 {
   font-family: Roboto;
   font-size: 15px;
   font-weight: 300;
@@ -121,7 +114,7 @@ img {
   margin-left: 8px;
 }
 
-.preço {
+.preco {
   font-family: Roboto;
   font-size: 16px;
   font-weight: 400;
@@ -131,7 +124,7 @@ img {
   height: 23px;
 }
 
-.preço2 {
+.preco-2 {
   font-family: Roboto;
   font-size: 16px;
   font-weight: 400;
@@ -142,7 +135,7 @@ img {
   margin-top: 9px;
 }
 
-.Titulo-post2 {
+.titulo-post2 {
   width: 320px;
   height: 25px;
   font-family: Righteous;
@@ -164,20 +157,7 @@ img {
   left: 0;
 }
 
-.botao-ativo {
-  background-color: #32b72f;
-  color: #ffffff;
-  border: none;
-  width: 80vw;
-  height: 61px;
-  font-family: Roboto;
-  font-size: 20px;
-  font-weight: 400;
-  text-align: center;
-  border-radius: 50px;
-}
-
-.botao-inativo {
+.btn-footer {
   background-color: #cbcbcb;
   color: #ffffff;
   border: none;
@@ -189,18 +169,26 @@ img {
   text-align: center;
   border-radius: 50px;
 }
-.fimdecompra {
+
+.botao-ativo {
+  background-color: #32b72f;
+}
+
+
+.fim-de-compra {
   display: none;
   position: fixed;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   background-color: rgba(238, 238, 238, 0.8);
-  top: 0;
   align-items: center;
   justify-content: center;
 }
 
-.telacompra {
+.activeModal{ 
+  display: flex;
+}
+
+.tela-compra {
   background-color: #4caf50;
   padding: 20px;
   margin-inline: 18px;
@@ -213,9 +201,8 @@ img {
   width: 100%;
 }
 
-.telacompra h1 {
+.tela-compra h1 {
   font-family: Roboto;
-
   color: white;
   margin-bottom: 15px;
   text-align: center;
