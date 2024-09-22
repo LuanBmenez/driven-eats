@@ -114,7 +114,7 @@ img {
   margin-left: 8px;
 }
 
-.preco {
+.preco, .preco-2 {
   font-family: Roboto;
   font-size: 16px;
   font-weight: 400;
@@ -125,13 +125,6 @@ img {
 }
 
 .preco-2 {
-  font-family: Roboto;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 18.75px;
-  text-align: left;
-  width: 139px;
-  height: 23px;
   margin-top: 9px;
 }
 
