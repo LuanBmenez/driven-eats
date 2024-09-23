@@ -2,7 +2,7 @@
 const comidas = document.querySelectorAll('.almoco, .bebidas, .sobremesas');
 const botaoFecharPedido = document.querySelector('.btn-footer');
 console.log(botaoFecharPedido)
-// Objeto para rastrear a seleção dos itens
+
 let itensSelecionados = {
     Comida: false,
     Bebida: false,
@@ -67,19 +67,16 @@ function mostrarResumoPedido() {
         const titulo = item.querySelector('.titulo-pedido').innerText;
         const dinheiro = Number(item.querySelector('.preco, .preco-2').innerText.replace(',', '.'));
 
-        // Criar elementos para adicionar na tela de final do pedido
         const itemPedido = document.createElement('p');
         itemPedido.innerHTML = `<span>${titulo}</span> <span>R$ ${dinheiro.toFixed(2).replace('.', ',')}</span>`;
         listaPedido.appendChild(itemPedido);
 
-        total += dinheiro; // Somar o preço
+        total += dinheiro; 
     });
 
-    // Atualiza o valor total no HTML
     document.getElementById('valor-total').innerText = total.toFixed(2).replace('.', ',');
 }
 
-// botão cancelar apaga a pagina de compras e volta para a inicial
 document.querySelector('.cancelar').addEventListener('click', function() {
     document.querySelector('.fim-de-compra').style.display = 'none';
 });
