@@ -4,9 +4,9 @@ const botaoFecharPedido = document.querySelector('.btn-footer');
 console.log(botaoFecharPedido)
 
 let itensSelecionados = {
-    Comida: false,
-    Bebida: false,
-    Sobremesa: false
+    Comidas: false,
+    Bebidas: false,
+    Sobremesas: false
 };
 
 
@@ -80,3 +80,33 @@ function mostrarResumoPedido() {
 document.querySelector('.cancelar').addEventListener('click', function() {
     document.querySelector('.fim-de-compra').style.display = 'none';
 });
+
+function eviarPedido(){
+
+    const almocoSelecionado = document.querySelector('.almoco .quadro-1.selected .titulo-pedido').innerText
+    const bebidaSelecionado = document.querySelector('.bebidas .quadro-1.selected .titulo-pedido').innerText
+    const sobremesaSelecionada = document.querySelector('.sobremesas .quadro-1.selected .titulo-pedido').innerText
+
+    const total = document.getElementById('valor-total').innerText
+    
+
+    const mensagem = `Olá, gostaria de fazer o pedido:
+    
+    - prato: ${almocoSelecionado}
+    - bebida: ${bebidaSelecionado}
+    - sobremesa: ${sobremesaSelecionada}
+    Total: ${total} `
+
+    const mensagemFormatada = encodeURIComponent(mensagem)
+    const pedidoFeito = document.querySelector('.confirmar') 
+    const url= `https://wa.me/+5574999108336?text=${mensagemFormatada}`
+    pedidoFeito.href = url
+ 
+    
+}
+
+/*Olá, gostaria de fazer o pedido:
+- Prato: Frango Yin Yang
+- Bebida: Coquinha Gelada
+- Sobremesa: Pudim
+Total: 27.70*/
