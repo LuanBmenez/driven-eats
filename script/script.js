@@ -105,8 +105,4 @@ function eviarPedido(){
     
 }
 
-/*Olá, gostaria de fazer o pedido:
-- Prato: Frango Yin Yang
-- Bebida: Coquinha Gelada
-- Sobremesa: Pudim
-Total: 27.70*/
+
